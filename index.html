@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Produk Kontributor Database</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pengajuan Produk Pendidikan Kontributor Database</h1>
+        
+        <div id="info-section">
+            <h2>Kirimkan Produk Anda untuk Ditinjau</h2>
+            <p>Formulir ini digunakan oleh Kontributor Database untuk mengirimkan produk pendidikan mereka kepada Perusahaan untuk peninjauan dan verifikasi sebelum menerima insentif.</p>
+            <p style="color: #FFDDC1; font-weight: bold;">Pastikan semua informasi dan file yang Anda unggah sudah benar.</p>
+        </div>
+
+        <form id="submission-form" 
+              action="https://formspree.io/f/xjkpppje" 
+              method="POST" 
+              enctype="multipart/form-data"> 
+            
+            <label for="nama_kontributor">Nama Kontributor/Lembaga:</label>
+            <input type="text" id="nama_kontributor" name="Nama_Kontributor" required>
+            
+            <label for="judul_file">Judul Produk Pendidikan:</label>
+            <input type="text" id="judul_file" name="Judul_Produk" required>
+
+            <label for="email_kontributor">Email Kontributor (untuk verifikasi):</label>
+            <input type="email" id="email_kontributor" name="Email_Kontributor" required>
+
+            <label for="deskripsi_file">Deskripsi Singkat Produk (Contoh: Jenjang, Mata Pelajaran, Ringkasan Konten):</label>
+            <textarea id="deskripsi_file" name="Deskripsi_Produk" rows="4" required></textarea>
+            
+            <label for="file_upload">Upload File Produk Pendidikan:</label>
+            <input type="file" id="file_upload" name="Upload_File" required>
+
+            <button type="submit" id="submit-button">Kirim Produk untuk Ditinjau</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
