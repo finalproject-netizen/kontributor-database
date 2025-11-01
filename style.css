@@ -1,0 +1,229 @@
+/*
+====================================
+1. FONT IMPORT (Hanya Penanda, kode impor ada di index.html)
+   Judul: Merriweather
+   Isi: Titillium Web
+====================================
+*/
+
+/* --- 2. General Body and Container --- */
+body {
+    /* Font Default untuk semua Teks Isi */
+    font-family: 'Titillium Web', sans-serif; 
+    background-color: #000000; /* Latar Belakang Hitam */
+    color: #f0f0f0; /* Teks Putih/Terang Default */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Konten dimulai dari atas */
+    min-height: 100vh; 
+    box-sizing: border-box; 
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #1a1a1a; /* Kotak konten sedikit lebih terang dari latar */
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+    max-width: 800px; 
+    width: 100%;
+    margin-top: 30px; 
+}
+
+/* --- 3. Headings (Judul) --- */
+h1, h2 {
+    /* Font untuk Judul */
+    font-family: 'Merriweather', serif; 
+    color: #FFDDC1; /* Warna cerah untuk judul, kontras */
+    text-align: center; 
+    border-bottom: 2px solid #2A0001; /* Garis bawah Merah Maroon */
+    padding-bottom: 15px; 
+    margin-bottom: 30px; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #ffffff; /* Judul sub-section putih */
+    border-bottom: 1px solid rgba(42, 0, 1, 0.5); 
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* --- 4. Info Section --- */
+#info-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #2A0001; /* Border Merah Maroon */
+    border-radius: 8px;
+    background-color: #222222; 
+    text-align: left;
+}
+
+#info-section p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    color: #dddddd; 
+}
+
+/* --- 5. Formulir Section --- */
+#submission-form {
+    padding: 20px 30px;
+    background-color: #222222; 
+    border-radius: 8px;
+    border: 1px solid #2A0001; /* Border Merah Maroon */
+}
+
+#submission-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600; /* Bobot Titillium Web */
+    color: #FFDDC1; 
+    font-size: 1.05em;
+}
+
+#submission-form input[type="text"],
+#submission-form input[type="email"],
+#submission-form input[type="tel"],
+#submission-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #444; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+    background-color: #333333; /* Latar belakang input lebih gelap */
+    color: #ffffff; /* Teks input putih */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#submission-form textarea {
+    resize: vertical; 
+    min-height: 100px;
+}
+
+/* Efek Fokus Input */
+#submission-form input:focus,
+#submission-form textarea:focus {
+    border-color: #2A0001; /* Border maroon saat fokus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 0, 1, 0.3); 
+}
+
+
+/* --- 6. File Upload Styling --- */
+#submission-form input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #444; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+    background-color: #333333; 
+    color: #ffffff; 
+    font-size: 1em;
+}
+
+/* Mengubah gaya tombol Browse/Choose File pada input type="file" */
+#submission-form input[type="file"]::file-selector-button {
+    background-color: #2A0001; /* Warna tombol file Maroon */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+#submission-form input[type="file"]::file-selector-button:hover {
+    background-color: #4a0002;
+}
+
+/* --- 7. Button Submit --- */
+#submission-form button[type="submit"] {
+    background-color: #2A0001; /* Merah Maroon */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 35px;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+    /* Menggunakan font Titillium Web yang diwariskan dari body */
+}
+
+#submission-form button[type="submit"]:hover {
+    background-color: #4a0002; 
+    transform: translateY(-2px); 
+}
+
+#submission-form button[type="submit"]:disabled {
+    background-color: #555555; /* Abu-abu gelap saat disabled */
+    cursor: not-allowed;
+    transform: translateY(0);
+}
+
+/* --- 8. Responsive Design (Agar Rapi di HP) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        padding-bottom: 8px;
+    }
+
+    #info-section, #submission-form {
+        padding: 15px;
+    }
+
+    #submission-form button[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+    
+    #submission-form input[type="file"]::file-selector-button {
+        /* Tombol file lebih kecil di HP */
+        padding: 6px 10px;
+    }
+}
